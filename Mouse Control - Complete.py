@@ -37,7 +37,6 @@ while True:
 				if (lm.x is not None) and (lm.y is not None):
 					imgXAxis = int(lm.x * imgWidth)
 					imgYAxis = int(lm.y *imgHeight)
-					
 				if id == 4:
 					x4 = imgXAxis
 					y4 = imgYAxis
@@ -61,34 +60,28 @@ while True:
 
 				if (x4 - x8) > (-30):
 					blockedMouse = True
-
+					
 					if ((y14 - y8) < 0) and ((y14 - y12) > 30):
-						
 						if (leftClick == True) and (isClicked == False):
 							pyautogui.mouseDown()
 							isClicked = True
 							leftClick = False
-							
 					else:
 						leftClick = True
 						isClicked = False
 						pyautogui.mouseUp()
 						print("esquerdo")
 
-
 					if ((y14 - y12) < 0) and ((y14 - y8) > 30):
-
 						if (rightClick == True) and (isClicked == False):
 							pyautogui.mouseDown(button = 'right')
 							isClicked = True
-							rightClick = False
-							
+							rightClick = False	
 					else:
 						rightClick = True
 						isClicked = False
 						pyautogui.mouseUp(button = 'right')
 						print("direito")
-
 
 					if ((y14 - y8) > 0) and ((y14 - y8) < 30) and ((y14 - y12) > 0) and ((y14 - y12) < 30):
 						isClicked = True
@@ -100,7 +93,6 @@ while True:
 					else:
 						doubleClick = True
 						isClicked = False
-
 				else:
 					blockedMouse = False
 						
